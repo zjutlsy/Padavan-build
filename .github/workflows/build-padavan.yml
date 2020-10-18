@@ -40,6 +40,7 @@ jobs:
       env:
         TNAME: K2P-5.0
       run: |
+        sed -i 's#studygolang.com/dl/golang#dl.google.com/go#g' /opt/rt-n56u/trunk/tools/Makefile
         cd /opt/rt-n56u/trunk
         if [ ! -f configs/templates/$TNAME.config ] ; then
         echo "configs/templates/$TNAME.config not found "
